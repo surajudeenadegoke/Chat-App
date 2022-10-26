@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"  
 
 function Register() {
   return (
@@ -7,14 +8,15 @@ function Register() {
         <span className="logo">Deen Chat</span>
         <span className="title">Register</span>
         <form>
-          <input type="text" placeholder="display name" />
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
           <input type="email" placeholder="email" />
-          <input type="password" placeholder="passwor" />
+          <input type="password" placeholder="password" />
           <input type="file" id="title" />
 
           <button>Sign Up</button>
         </form>
-        <p>You have an account? Login</p>
+        <p>You have an account? <Link to = {'/login'} className = "link">Login</Link></p>
       </div>
     </div>
   );
